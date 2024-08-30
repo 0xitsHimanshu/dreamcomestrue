@@ -12,7 +12,7 @@ function App() {
   return (
         <div className='flex flex-col min-h-screen'>
           <Navbar />
-          <main className='flex-grow mt-4 '>
+          <main className='flex-grow'>
               <Routes>
                 <Route path="/" element={<Homepage />} />
                 <Route path="/about" element={<AboutUspage />} />
