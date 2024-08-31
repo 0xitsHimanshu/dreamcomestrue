@@ -3,11 +3,15 @@ import { Link, Outlet } from "react-router-dom";
 import logo from "../assets/react.svg";
 
 const Navbar = () => {
+    const handleClick = () => {
+        console.log('clicked');
+    }
+
   return (
     <>
       <nav className="fixed mx-auto lg:px-15 md:px-8 sm:px-6 px-4 py-3 items-center w-full z-50 ">
-        <div className="mx-4 py-3 px-7 my-2 flex items-center justify-between backdrop-blur-lg rounded-full border border-gray-50/10  ">
-          <div className=" flex flex-col self-stretch my-auto text-white">
+        <div className="md:gap-1 mx-4 py-3 px-7 my-2 flex bg-gray-700/10 items-center justify-between backdrop-blur-sm rounded-full border border-gray-50/10  ">
+          <div className=" flex flex-col max-md:line-clamp-1 self-stretch md: my-auto text-white">
             <Link
               to={"/"}
               className="flex items-center gap-4 lg:text-2xl text-xl font-bold"
@@ -16,7 +20,7 @@ const Navbar = () => {
               <span>Dream Comes True Travels</span>
             </Link>
           </div>
-          <div className="flex lg:gap-10 gap-5 items-center my-auto font-medium max-md:hidden max-md:text-sm text-white">
+          <div className="flex lg:gap-10 md:gap-4 items-center my-auto font-medium max-md:hidden max-md:text-sm text-white">
             <Link to={"/"} className="self-stretch my-auto hover:underline">
               Home
             </Link>
@@ -41,6 +45,12 @@ const Navbar = () => {
             >
               Take a Trip
             </Link>
+          </div>
+
+          <div className="lg:hidden md:hidden text-white text-2xl  ">
+            <button onClick={handleClick}>
+                <i className="fi fi-rr-list"></i>
+            </button>           
           </div>
         </div>
       </nav>
