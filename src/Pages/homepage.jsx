@@ -9,7 +9,7 @@ const Homepage = () => {
         <div className='h-screen sm:h-[50%]'>
             {/* Hero sections */}
             <section className='hero-section h-screen  relative'>
-                <video src={video} className='absolute top-0 left-0 w-full h-full object-cover' autoPlay muted loop playsInline/>
+                {/* <video src={video} className='absolute top-0 left-0 w-full h-full object-cover' autoPlay muted loop playsInline/> */}
 
                 {/* <img src={bgImg} className='absolute top-0 left-0 w-full h-full object-cover '  /> */}
                 <div className="relative z-10 container mx-auto h-full flex flex-col justify-center text-white">
