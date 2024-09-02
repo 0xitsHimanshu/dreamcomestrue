@@ -28,7 +28,7 @@ const Homepage = () => {
           {/* Grid Section */}
           <div className="mt-8 grid grid-cols-3 md:grid-cols-3 gap-8 text-white text-center">
             {[1, 2, 3].map((num) => (
-              <div key={num} className="flex flex-col">
+              <div key={num} className="flex flex-col text-left">
                 <span className="text-2xl sm:text-4xl font-bold mb-2 sm:mb-4">0{num}</span>
                 <h3 className="text-xl sm:text-2xl font-semibold mb-2 sm:mb-3">
                   Choose a place, activity, and time
@@ -42,14 +42,31 @@ const Homepage = () => {
         </div>
 
         {/* Footer Image */}
-        <img
-          loading="lazy"
-          src="https://cdn.builder.io/api/v1/image/assets/TEMP/6befbf50e63365c71e47352a789a1e201bc230fd5b3141079ec2afbbdaaa3316?placeholderIfAbsent=true&apiKey=25ce0e8c4ce54353824bfcfe4962d633"
-          alt="Footer Image"
-          className="relative lg:bottom-16 bottom-10 object-cover z-10 w-full aspect-[9.09] max-md:max-w-full"
-        />
+        <div className="relative w-full">
+          {/* Tilted background */}
+          <div 
+            className="w-full absolute top-0 left-0 h-20 bg-gradient-to-r from-[#3D4D6B] to-[#1C1D21] transform -skew-x-6 -skew-y-3 z-10" >
+              {/* Text content */}
+            <div className="relative z-10 gap-28 flex justify-center items-center h-full text-white overflow-hidden">
+              <span className="text-2xl md:text-4xl font-bold mr-8">explore</span>
+              <span className="text-2xl md:text-4xl font-bold mr-8">adventure</span>
+              <span className="text-2xl md:text-4xl font-bold mr-8">luxury</span>
+              <span className="text-2xl md:text-4xl font-bold mr-8">enjoy</span>
+              <span className="text-2xl md:text-4xl font-bold">explore</span>
+            </div>
+          </div>
+          {/* Neon green div */}
+          <div className="absolute top-0 left-0 w-full h-24 bg-[#B8FF00] z-5"></div>
+
+        </div>
+
+        <div className='bg-[#1e1e1e] h-52 m-0'>
+
+        </div>
       </section>
-      <section className="w-full"></section>
+      <section className="w-full">
+
+      </section>
     </div>
   );
 }
