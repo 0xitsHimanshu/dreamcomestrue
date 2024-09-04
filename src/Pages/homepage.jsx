@@ -1,34 +1,37 @@
 import React, { useRef, useState } from "react";
 import bgVideo from "../assets/video.mp4";
 import DestinationCard from "../components/destinationCard";
+import tajImage from "../assets/taj-mahal.jpg";
+import eifleImage from "../assets/eifle-tower.jpg";
+import kajuruImage from "../assets/kajuru-castle.jpg";
 
 
 const destinations = [
   {
     name: "Taj Mahal",
     location: "Uttar Pradesh, India",
-    image: "../assets/taj-mahal.jpg",
+    image: tajImage,
     flag: "🇮🇳",
     visitors: "530 wants to travel here",
   },
   {
     name: "Eiffel Tower",
     location: "Paris, France",
-    image: "eifle-tower.jpg",
+    image: eifleImage,
     flag: "🇫🇷",
     visitors: "500 wants to travel here",
   },
   {
     name: "Taj Mahal",
     location: "Uttar Pradesh, India",
-    image:"../assets/taj-mahal.jpg",
+    image: tajImage,
     flag: "🇮🇳",
     visitors: "230 wants to travel here",
   },
   {
     name: "Kajuru Castle",
     location: "Kaduna, Nigeria",
-    image: "../assets/kajuru-castle.jpg",
+    image: kajuruImage,
     flag: "🇳🇬",
     visitors: "450 wants to travel here",
   },
