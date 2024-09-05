@@ -213,6 +213,27 @@ const Homepage = () => {
           </div>
 
         </div>
+
+        <div className="my-5 py-4 px-16 flex items-center justify-between max-sm:text-center max-md:px-8 max-sm:grid max-sm:grid-cols-1 ">
+          
+          {/* heading */}
+          <div className="text-blueGrey text-left my-10">
+            <span className="font-bold text-lg">Where do you want to go?</span>
+            <h1 className="text-5xl font-bold mt-4 font-playfair">Lets us worry about your plans,</h1>
+            <h1 className="text-5xl font-bold font-playfair">Just get packed</h1>
+          </div>
+
+          {/* Take trip btn*/}
+          <div className="max-sm:flex max-sm:justify-center">
+            <button className="bg-neonGreen text-blueGrey py-3 px-9 rounded-full font-semibold flex items-center justify-center gap-3">
+              <span>Take a trip</span>
+              <span className="flex items-center">
+                <i className="fi fi-rr-arrow-right text-xl"></i>
+              </span>
+            </button>
+          </div>
+
+        </div>
       </section>
     </div>
   );

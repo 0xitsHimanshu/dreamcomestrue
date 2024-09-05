@@ -14,7 +14,7 @@ export default{
         playfair: ['Playfair Display', 'serif'],
       },
       colors: {
-        neonGreen: '#B8FF00',
+        neonGreen: '#ccf32f',
         blueGrey: '#0e3d4d',
       },
       spacing: {
