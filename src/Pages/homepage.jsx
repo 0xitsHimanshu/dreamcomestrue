@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import bgVideo from "../assets/video.mp4";
 import DestinationCard from "../components/destinationCard";
 import tajImage from "../assets/taj-mahal.jpg";
@@ -37,8 +37,11 @@ const destinations = [
   },
 ];
 
-const Homepage = () => {
 
+const Homepage = () => {
+  
+  const [LeftArrBtn, SetLeftArrBtn] = useState(false);
+  const [RightArrBtn, SetRightArrBtn] = useState(false);
   const scrollRef = useRef(null);
   const [scrollPosition, setScrollPosition] = useState(0);
 
@@ -58,6 +61,16 @@ const Homepage = () => {
           left: newPosition,
           behaivor: "smooth",
         });
+        
+        //setting state on arrow btn click
+        if(direction == 'left'){
+          SetLeftArrBtn(true);
+          SetRightArrBtn(false);
+        } else {
+          SetRightArrBtn(true);
+          SetLeftArrBtn(false);
+        }
+        
         setScrollPosition(newPosition);
       }
   }
@@ -155,47 +168,50 @@ const Homepage = () => {
       {/* Second section */}
       <section className="w-full h-full bg-gray-100 py-10">
 
-        <div className="max-sm:text-center m-5 py-4 px-8 flex items-center justify-between max-sm:grid max-sm:grid-cols-1 ">
+        <div className="my-5 py-4 px-16 flex items-center justify-between max-sm:text-center max-md:px-8 max-sm:grid max-sm:grid-cols-1 ">
           
           {/* heading */}
-          <div className="text-blueGrey text-left">
+          <div className="text-blueGrey text-left mb-10">
             <span className="font-bold text-lg">Where do you want to go?</span>
-            <h2 className="text-4xl font-bold mt-4 font-playfair">Popular Destinations</h2>
+            <h1 className="text-5xl font-bold mt-4 font-playfair">Popular Destinations</h1>
           </div>
 
           {/* arrow btns */}
-          <div className="flex gap-4 max-sm:grid max-sm:grid-cols-1 text-blueGrey">
+          <div className="flex gap-4 items-center">
             <button 
               onClick={() => handleScroll("left")}
-              className="w-24 h-auto border-2 border-blueGrey rounded-full"
+              className={"w-24 h-auto border-2 border-blueGrey rounded-full text-blueGrey "+ (LeftArrBtn ? "bg-blueGrey text-white " : "")}
             >
               <i className="fi fi-rr-arrow-left text-5xl "></i>
             </button>
+
             <button 
               onClick={() => handleScroll("right")}
-              className="w-24 h-auto border-2 border-blueGrey rounded-full" 
+              className={"w-24 h-auto border-2 border-blueGrey rounded-full text-blueGrey "+ (RightArrBtn ? "bg-blueGrey text-white " : "")} 
             >
               <i className="fi fi-rr-arrow-right text-5xl "></i>
             </button>
           </div>
         </div>
         <div>
+
           {/* Destination scroll card */}
 
           <div
             ref={scrollRef}
-            className="flex space-x-4 overflow-x-auto scrollbar-hide px-5"
+            className="px-16 gap-6 flex space-x-4 overflow-x-auto scrollbar-hide  max-md:px-8"
             style={{scrollBehavior: "smooth"}}
           >
           { 
             destinations.map((destination, index) => (
-              <div key={index} className="flex-none w-64"> 
+              <div key={index} className="flex-none w-80"> 
                 <DestinationCard destination={destination} />
               </div>
             ))
             
           }
           </div>
+
         </div>
       </section>
     </div>

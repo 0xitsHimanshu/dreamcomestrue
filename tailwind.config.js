@@ -16,6 +16,9 @@ export default{
       colors: {
         neonGreen: '#B8FF00',
         blueGrey: '#0e3d4d',
+      },
+      spacing: {
+        '98': '28.25rem',
       }
     },
   },
