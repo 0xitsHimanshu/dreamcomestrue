@@ -234,6 +234,33 @@ const Homepage = () => {
           </div>
 
         </div>
+
+        <div>
+          <div>
+            <div>
+              <img src={} alt="" />
+            </div>
+
+            <div className="text-blueGrey">
+              <i className="fi fi-rr-car"></i>
+              <h2>Rent a car</h2>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis id culpa quaerat adipisci.</p>
+              <button className="underline">
+                Lets Go 
+                <i className="fi fi-rr-arrow-right"></i>
+              </button>
+            </div>
+            <div className="text-blueGrey">
+              <i className="fi fi-rr-bed"></i>
+              <h2>Get a hotel</h2>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis id culpa quaerat adipisci.</p>
+              <button className="underline">
+                Lets Go 
+                <i className="fi fi-rr-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+        </div>
       </section>
     </div>
   );
