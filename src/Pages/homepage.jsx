@@ -4,6 +4,7 @@ import DestinationCard from "../components/destinationCard";
 import tajImage from "../assets/taj-mahal.jpg";
 import eifleImage from "../assets/eifle-tower.jpg";
 import kajuruImage from "../assets/kajuru-castle.jpg";
+import cardImg from "../assets/cardImage.png";
 
 
 const destinations = [
@@ -193,13 +194,14 @@ const Homepage = () => {
             </button>
           </div>
         </div>
+
         <div>
 
           {/* Destination scroll card */}
 
           <div
             ref={scrollRef}
-            className="px-16 gap-6 flex space-x-4 overflow-x-auto scrollbar-hide  max-md:px-8"
+            className="px-16 gap-6 flex space-x-4 overflow-x-auto no-scrollbar scrollbar-hide  max-md:px-8"
             style={{scrollBehavior: "smooth"}}
           >
           { 
@@ -235,32 +237,46 @@ const Homepage = () => {
 
         </div>
 
-        <div>
-          <div>
-            <div>
-              <img src={} alt="" />
+        <div className="my-5 py-4 px-16 flex items-center justify-between max-md:px-8 max-md:flex-col max-sm:px-4 max-sm:grid max-sm:grid-cols-1 max-sm:gap-8">
+
+          <div className="flex max-md:flex-col max-md:items-center">
+
+            {/* Image */}
+            <div className="w-99 h-100 max-sm:w-full max-sm:h-auto">
+              <img src={cardImg} className="w-full h-full object-cover" alt="" />
             </div>
 
-            <div className="text-blueGrey">
-              <i className="fi fi-rr-car"></i>
-              <h2>Rent a car</h2>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis id culpa quaerat adipisci.</p>
-              <button className="underline">
-                Lets Go 
-                <i className="fi fi-rr-arrow-right"></i>
-              </button>
+            {/* Content */}
+            <div className="grid grid-cols-1 py-5 my-10 gap-6 max-sm:my-5 max-sm:mx-5  max-sm:gap-4 max-md:py-0 max-md:my-5">
+
+              {/* Rent a car */}
+              <div className="text-blueGrey">
+                <i className="fi fi-rr-car text-4xl max-sm:text-3xl"></i>
+                <h2 className="text-4xl font-semibold font-playfair max-sm:text-2xl">Rent a car</h2>
+                <p className="text-xl font-normal line-clamp-2 max-sm:text-base">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis id culpa quaerat adipisci.</p>
+                <button className="underline mt-2 font-bold">
+                  Lets Go 
+                  <i className="fi fi-br-arrow-right"></i>
+                </button>
+              </div>
+
+              {/* Get a hotel */}
+              <div className="text-blueGrey">
+                <i className="fi fi-rr-bed text-4xl max-sm:text-3xl"></i>
+                <h2 className="text-4xl font-semibold font-playfair max-sm:text-2xl">Get a hotel</h2>
+                <p className="text-xl font-normal line-clamp-2 max-sm:text-base">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis id culpa quaerat adipisci.</p>
+                <button className="underline mt-2 font-bold">
+                  Lets Go 
+                  <i className="fi fi-br-arrow-right"></i>
+                </button>
+              </div>
+
             </div>
-            <div className="text-blueGrey">
-              <i className="fi fi-rr-bed"></i>
-              <h2>Get a hotel</h2>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis id culpa quaerat adipisci.</p>
-              <button className="underline">
-                Lets Go 
-                <i className="fi fi-rr-arrow-right"></i>
-              </button>
-            </div>
+
           </div>
+
         </div>
+
       </section>
     </div>
   );
