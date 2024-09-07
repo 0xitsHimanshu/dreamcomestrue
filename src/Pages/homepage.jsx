@@ -169,7 +169,7 @@ const Homepage = () => {
       {/* Second section */}
       <section className="w-full h-full bg-gray-100 py-10">
 
-        <div className="my-5 py-4 px-16 flex items-center justify-between max-sm:text-center max-md:px-8 max-sm:grid max-sm:grid-cols-1 ">
+        <div className="my-5 py-4 px-16 flex items-center justify-between max-sm:text-center max-md:px-8 max-sm:grid max-sm:grid-cols-1 lg:mx-32">
           
           {/* heading */}
           <div className="text-blueGrey text-left mb-10">
@@ -195,7 +195,7 @@ const Homepage = () => {
           </div>
         </div>
 
-        <div>
+        <div className="lg:mx-32">
 
           {/* Destination scroll card */}
 
@@ -216,7 +216,7 @@ const Homepage = () => {
 
         </div>
 
-        <div className="my-5 py-4 px-16 flex items-center justify-between max-sm:text-center max-md:px-8 max-sm:grid max-sm:grid-cols-1 ">
+        <div className="my-5 py-4 px-16 flex items-center justify-between max-sm:text-center max-md:px-8 max-sm:grid max-sm:grid-cols-1 lg:mx-32">
           
           {/* heading */}
           <div className="text-blueGrey text-left my-10">
@@ -237,13 +237,13 @@ const Homepage = () => {
 
         </div>
 
-        <div className="my-5 py-4 px-16 flex items-center justify-between max-md:px-8 max-md:flex-col max-sm:px-4 max-sm:grid max-sm:grid-cols-1 max-sm:gap-8">
+        <div className="my-5 py-4 px-16 flex items-center justify-between max-md:px-8 max-md:flex-col max-sm:px-4 max-sm:grid max-sm:grid-cols-1 max-sm:gap-16 lg:mx-32">
 
-          <div className="flex max-md:flex-col max-md:items-center">
+          <div className="flex max-md:flex-col max-md:items-center md:gap-4 lg:gap-8">
 
             {/* Image */}
             <div className="w-99 h-100 max-sm:w-full max-sm:h-auto">
-              <img src={cardImg} className="w-full h-full object-cover" alt="" />
+              <img src={cardImg} className="w-full h-full object-cover " alt="" />
             </div>
 
             {/* Content */}
@@ -251,7 +251,7 @@ const Homepage = () => {
 
               {/* Rent a car */}
               <div className="text-blueGrey">
-                <i className="fi fi-rr-car text-4xl max-sm:text-3xl"></i>
+                <i className="fi fi-rs-taxi text-4xl max-sm:text-4xl"></i>
                 <h2 className="text-4xl font-semibold font-playfair max-sm:text-2xl">Rent a car</h2>
                 <p className="text-xl font-normal line-clamp-2 max-sm:text-base">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis id culpa quaerat adipisci.</p>
                 <button className="underline mt-2 font-bold">
@@ -262,7 +262,7 @@ const Homepage = () => {
 
               {/* Get a hotel */}
               <div className="text-blueGrey">
-                <i className="fi fi-rr-bed text-4xl max-sm:text-3xl"></i>
+                <i className="fi fi-rr-bed text-4xl max-sm:text-4xl"></i>
                 <h2 className="text-4xl font-semibold font-playfair max-sm:text-2xl">Get a hotel</h2>
                 <p className="text-xl font-normal line-clamp-2 max-sm:text-base">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis id culpa quaerat adipisci.</p>
                 <button className="underline mt-2 font-bold">
