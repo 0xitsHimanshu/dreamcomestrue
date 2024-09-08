@@ -18,9 +18,11 @@ export default{
         blueGrey: '#0e3d4d',
       },
       spacing: {
+        '97': '27.25rem',
         '98': '28.25rem',
         '99': '32.188rem',
         '100': '33.813rem',
+        '101': '51.25rem',
       }
     },
   },
