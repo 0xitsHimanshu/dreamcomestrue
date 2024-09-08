@@ -48,8 +48,8 @@ const trips = [
 
 const TripCard = ({preview, title, location, trips, className}) => {
   return (
-    <div className={`relative overflow-hidden rounded-lg drop-shadow-[0_5px_5px_rgba(0,0,0,0.5)] ${className}`}>
-      <img src={preview} className="w-full h-full object-cover" alt={title} />
+    <div className={`relative overflow-hidden rounded-lg transition-transform duration-500 ease-in-out hover:-translate-y-4 hover:drop-shadow-[0_15px_15px_rgba(0,0,0,0.45)] ${className}`}>
+      <img src={preview} className="w-full h-full object-cover transition-transform duration-500 ease-in-out" alt={title} />
       <div className="absolute inset-0 flex flex-col justify-end p-5">
         <h3 className="text-white text-xl font-bold">{title}</h3>
         <p className="text-white text-sm">{location}, {trips} Trips</p>
@@ -201,9 +201,10 @@ const Homepage = () => {
 
       {/* Second section */}
       <section className="w-full h-full bg-white py-10">
+        {/* heading for the destination card */}
         <div className="my-5 py-4 px-16 flex items-center justify-between max-sm:text-center max-md:px-8 max-sm:grid max-sm:grid-cols-1 lg:mx-32">
           {/* heading */}
-          <div className="text-blueGrey text-left mb-10">
+          <div className="text-blueGrey text-left mb-5">
             <span className="font-bold text-lg">Where do you want to go?</span>
             <h1 className="text-5xl font-bold mt-4 font-playfair">
               Popular Destinations
@@ -233,23 +234,25 @@ const Homepage = () => {
             </button>
           </div>
         </div>
-
-        <div className="lg:mx-32">
+        
+        {/* Destination card */}
+        <div className="lg:mx-32 pt-5">
           {/* Destination scroll card */}
 
           <div
             ref={scrollRef}
-            className="px-16 gap-6 flex space-x-4 overflow-x-auto no-scrollbar scrollbar-hide  max-md:px-8"
+            className="px-16 py-5 gap-6 flex space-x-4 overflow-x-auto no-scrollbar scrollbar-hide  max-md:px-8"
             style={{ scrollBehavior: "smooth" }}
           >
             {destinations.map((destination, index) => (
-              <div key={index} className="flex-none w-80 drop-shadow-[0_5px_5px_rgba(0,0,0,0.75)]">
+              <div key={index} className=" py-5 flex-none w-80 transition-transform duration-500 ease-in-out hover:-translate-y-4  hover:drop-shadow-[0_10px_15px_rgba(0,0,0,0.75)]">
                 <DestinationCard destination={destination} />
               </div>
             ))}
           </div>
         </div>
 
+        {/* Take trip btn with p  */}
         <div className="my-5 py-4 px-16 flex items-center justify-between max-sm:text-center max-md:px-8 max-sm:grid max-sm:grid-cols-1 lg:mx-32">
           {/* heading */}
           <div className="text-blueGrey text-left my-10">
@@ -273,6 +276,7 @@ const Homepage = () => {
           </div>
         </div>
 
+        {/* Rent a car and get a hotel */}
         <div className="my-5 py-4 px-16 flex items-center justify-between max-md:px-8 max-md:flex-col max-sm:px-4 max-sm:grid max-sm:grid-cols-1 max-sm:gap-16 lg:mx-32">
           <div className="flex max-md:flex-col max-md:items-center md:gap-4 lg:gap-8">
             {/* Image */}
@@ -321,6 +325,7 @@ const Homepage = () => {
           </div>
         </div>
 
+        {/* Trip Gallery */}
         <div className="my-5 py-8 px-16 flex flex-col items-center justify-center max-md:px-8 max-sm:px-4 lg:mx-32">
           {/* Header Section */}
           <div className="text-blueGrey mb-10">
@@ -347,6 +352,8 @@ const Homepage = () => {
             </button>
           </div>
         </div>
+
+        
       </section>
     </div>
   );
