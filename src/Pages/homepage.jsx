@@ -200,7 +200,7 @@ const Homepage = () => {
       </section>
 
       {/* Second section */}
-      <section className="w-full h-full bg-white py-10">
+      <section className="w-full h-full bg-white pt-10">
         {/* heading for the destination card */}
         <div className="my-5 py-4 px-16 flex items-center justify-between max-sm:text-center max-md:px-8 max-sm:grid max-sm:grid-cols-1 lg:mx-32">
           {/* heading */}
@@ -356,8 +356,8 @@ const Homepage = () => {
         {/* Testimonial div */}
 
         {/* Contact us */}
-        <div className="my-5 py-8 flex items-center justify-center max-md:px-8 max-sm:px-4 bg-blueGreen min-h-99" >
-            <div className="grid grid-cols-1 gap-12 items-center text-center">
+        <div className="mt-10 flex items-center justify-center max-md:px-8 max-sm:px-4 bg-blueGreen min-h-99" >
+            <div className="grid grid-cols-1  items-center justify-between text-center h-80">
               <div className="font-playfair text-center text-white">
                 <p className="font-bold text-4xl">Ready to go?</p>
                 <h1 className="text-5xl font-bold mt-4 font-playfair" >Give us a quick call</h1>
@@ -371,11 +371,6 @@ const Homepage = () => {
         </div>
       </section>
 
-      {/* footer */}
-
-      <section className="w-full h-gull ">
-
-      </section>
     </div>
   );
 };

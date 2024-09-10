@@ -4,6 +4,7 @@ import Homepage from './Pages/homepage'
 import AboutUspage from './Pages/About'
 import BlogPage from './Pages/Blog'
 import ContactPage from './Pages/Contact'
+import Footer from './components/footer'
 
 function App() {
 
@@ -21,6 +22,8 @@ function App() {
                 <Route path="/trip" element={<h1>take trip with us</h1>} />
               </Routes>
           </main>
+
+          <Footer />
         </div>
   )
 }
