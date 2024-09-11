@@ -8,42 +8,53 @@ const Footer = () => {
       <div className="container mx-auto px-4 py-8">
         {/* Top section with logo and social icons */}
 
-        <div className="max-md:flex justify-between">
+        <div className="px-4 flex justify-between max-md:grid max-md:grid-cols-1 max-md:gap-6">
+          {/* Left Section (Logo and Description) */}
           <div className="">
             <Link
-              to={"/"}
-              className="flex items-center gap-4 lg:text-2xl max-sm:text-base text-xl font-bold"
+              to="/"
+              className="flex items-center gap-4 lg:text-4xl text-2xl max-md:text-xl max-sm:text-base font-bold"
             >
               <img
                 src={logo}
                 alt="logo"
-                className="w-10 h-10 max-sm:w-5 max-sm:h-5"
+                className="w-10 h-10 max-md:w-8 max-md:h-8 max-sm:w-5 max-sm:h-5"
               />
-              <span className="drop-shadow-lg">Dream Comes True Travels</span>
+              <span className="drop-shadow-lg font-playfair">Dream Comes True Travels</span>
             </Link>
+
+            {/* Description */}
+            <div className="max-w-99 mt-4 grid grid-cols-1 justify-between min-h-40">
+              <p className="mx-6 mb-5 max-md:mx-2 text-lg max-sm:text-sm text-gray-300/50">
+                Dream comes true travels offering you a wide range of national and international holiday packages to enjoy hassle-free holiday with your family and friends.
+              </p>
+              <Link to={'/term-conditions'} className="mx-6 max-md:mx-2 hover:underline max-sm:text-xs font-semibold ">
+                <span className='hover:text-neonGreen'>*Terms & Conditions with Cancellation Policy</span>
+              </Link>
+            </div>
           </div>
-          <div className="grid gap-6 grid-col-1">
-            <h1 className="text-4xl">Contact Info</h1>
-            <p>
-                <i className='fi fi-sr-mobile'></i>{" "}
-                +234 803 123 4567
+
+          {/* Right Section (Contact Info) */}
+          <div className="grid gap-6 grid-cols-1 text-lg max-md:text-base max-sm:text-sm">
+            <h1 className="text-2xl lg:text-4xl max-md:text-xl font-bold">Contact Info</h1>
+
+            <p className="flex items-center">
+              <i className="fi fi-sr-mobile mr-2"></i> +234 803 123 4567
             </p>
 
-            <p>
-                <i className='fi fi-sr-envelope'></i>{" "}
-                info@dreamcomestrue.in
+            <p className="flex items-center">
+              <i className="fi fi-sr-envelope mr-2"></i> info@dreamcomestrue.in
             </p>
 
-            <p>
-                <i className='fi fi-sr-location'></i>{" "}
-                123, Dreamland, Lagos, Nigeria
+            <p className="flex items-center">
+              <i className="fi fi-sr-location mr-2"></i> 123, Dreamland, Lagos, Nigeria
             </p>
-            <p className=''>
-              <i className='fi fi-sr-alarm-clock'></i>{" "} 
-                <span>Monday - Friday: 9:00 AM - 5:00 PM</span> 
+
+            <p className="flex items-center">
+              <i className="fi fi-sr-alarm-clock mr-2"></i> 
+              <span>Monday - Friday: 9:00 AM - 5:00 PM</span> 
             </p>
           </div>
-    
         </div>
 
         {/* Divider */}

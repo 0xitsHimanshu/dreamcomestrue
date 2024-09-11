@@ -337,11 +337,11 @@ const Homepage = () => {
 
           {/* Trip Cards */}
           <div className="grid grid-cols-3 gap-12 max-md:grid-cols-2 max-md:gap-8 max-sm:grid-cols-2 max-sm:gap-6">
-            <TripCard {...trips[0]} className="col-span-1 w-96 h-97 max-h-[500px] max-md:w-full max-md:h-[300px] max-sm:h-[250px]" />
-            <TripCard {...trips[1]} className="col-span-2 w-101 h-97 max-h-[500px] max-md:col-span-1 max-md:w-full max-md:h-[300px] max-sm:h-[250px]" />
-            <TripCard {...trips[2]} className="col-span-1 w-96 h-97 max-h-[500px] max-md:w-full max-md:h-[300px] max-sm:h-[250px]" />
-            <TripCard {...trips[3]} className="col-span-1 w-96 h-97 max-h-[500px] max-md:w-full max-md:h-[300px] max-sm:h-[250px]" />
-            <TripCard {...trips[4]} className="col-span-1 w-96 h-97 max-h-[500px] max-md:w-full max-md:h-[300px] max-sm:h-[250px] max-sm:col-span-2" />
+            <TripCard {...trips[0]} className="col-span-1 w-auto h-97 max-h-[500px] max-md:w-full max-md:h-[300px] max-sm:h-[250px]" />
+            <TripCard {...trips[1]} className="col-span-2 w-auto h-97 max-h-[500px] max-md:col-span-1 max-md:w-full max-md:h-[300px] max-sm:h-[250px]" />
+            <TripCard {...trips[2]} className="col-span-1 w-auto h-97 max-h-[500px] max-md:w-full max-md:h-[300px] max-sm:h-[250px]" />
+            <TripCard {...trips[3]} className="col-span-1 w-auto h-97 max-h-[500px] max-md:w-full max-md:h-[300px] max-sm:h-[250px]" />
+            <TripCard {...trips[4]} className="col-span-1 w-auto h-97 max-h-[500px] max-md:w-full max-md:h-[300px] max-sm:h-[250px] max-sm:col-span-2" />
           </div>
 
           {/* Button Section */}
