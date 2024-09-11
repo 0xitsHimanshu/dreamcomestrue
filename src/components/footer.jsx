@@ -8,7 +8,7 @@ const Footer = () => {
       <div className="container mx-auto px-4 py-8">
         {/* Top section with logo and social icons */}
 
-        <div className="">
+        <div className="max-md:flex justify-between">
           <div className="">
             <Link
               to={"/"}
@@ -22,44 +22,28 @@ const Footer = () => {
               <span className="drop-shadow-lg">Dream Comes True Travels</span>
             </Link>
           </div>
-          <div className="">
-            <h1>Contact Info</h1>
+          <div className="grid gap-6 grid-col-1">
+            <h1 className="text-4xl">Contact Info</h1>
             <p>
-                <i className='fi fi-mobile'></i>
+                <i className='fi fi-sr-mobile'></i>{" "}
                 +234 803 123 4567
             </p>
 
             <p>
-                <i className='fi fi-sr-envelope'></i>
+                <i className='fi fi-sr-envelope'></i>{" "}
                 info@dreamcomestrue.in
             </p>
 
             <p>
-                <i className='fi fi-sr-location'></i>
+                <i className='fi fi-sr-location'></i>{" "}
                 123, Dreamland, Lagos, Nigeria
             </p>
-            <p>
-              <i className='fi fi-sr-alarm-clock'></i> 
-                Monday - Friday: 9:00 AM - 5:00 PM 
+            <p className=''>
+              <i className='fi fi-sr-alarm-clock'></i>{" "} 
+                <span>Monday - Friday: 9:00 AM - 5:00 PM</span> 
             </p>
           </div>
-          <div className='text-white'>
-            <button className='w-4 h-4'>
-                <i className='fi fi-rr-facebook'></i>
-            </button>
-
-            <button className='w-4 h-4'>
-                <i className='fi fi-rr-instagram'></i>
-            </button>
-
-            <button className='w-4 h-4'>
-                <i className='fi fi-rr-linkedin'></i>
-            </button>
-
-            <button className='w-4 h-4'>
-                <i className='fi fi-rr-twitter'></i>
-            </button>
-          </div>
+    
         </div>
 
         {/* Divider */}
