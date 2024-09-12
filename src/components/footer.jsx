@@ -50,23 +50,26 @@ const Footer = () => {
             </h1>
 
             <p className="flex items-center">
-              <i className="fi fi-sr-mobile mr-2"></i> +234 803 123 4567
+              <i className="fi fi-br-phone-call mr-2 text-xl"></i> 
+              <span>+234 803 123 4567</span>
             </p>
 
             <p className="flex items-center">
-              <i className="fi fi-sr-envelope mr-2"></i> info@dreamcomestrue.in
+              <i className="fi fi-br-at mr-2 text-xl"></i> 
+              <span>info@dreamcomestrue.in</span>
             </p>
 
             <p className="flex items-center">
-              <i className="fi fi-sr-location mr-2"></i> 123, Dreamland, Lagos,
-              Nigeria
+              <i className="fi fi-br-land-layer-location mr-2 text-xl"></i> 
+              <span>123, Dreamland, Lagos, Nigeria</span>
             </p>
 
             <p className="flex items-center">
-              <i className="fi fi-sr-alarm-clock mr-2"></i>
+              <i className="fi fi-br-clock mr-2 text-xl"></i>
               <span>Monday - Friday: 9:00 AM - 5:00 PM</span>
             </p>
           </div>
+        
         </div>
 
         {/* Divider */}
