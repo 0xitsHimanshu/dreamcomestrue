@@ -3,9 +3,9 @@ import { Link, Outlet } from "react-router-dom";
 import logo from "../assets/react.svg";
 
 const Navbar = () => {
-    const handleClick = () => {
-        console.log('clicked');
-    }
+  const handleClick = () => {
+    console.log("clicked");
+  };
 
   return (
     <>
@@ -16,7 +16,11 @@ const Navbar = () => {
               to={"/"}
               className="flex items-center gap-4 lg:text-2xl max-sm:text-base text-xl font-bold"
             >
-              <img src={logo} alt="logo" className="w-10 h-10 max-sm:w-5 max-sm:h-5" />
+              <img
+                src={logo}
+                alt="logo"
+                className="w-10 h-10 max-sm:w-5 max-sm:h-5"
+              />
               <span className="drop-shadow-lg">Dream Comes True Travels</span>
             </Link>
           </div>
@@ -49,8 +53,8 @@ const Navbar = () => {
 
           <div className="lg:hidden md:hidden text-white text-2xl  ">
             <button onClick={handleClick}>
-                <i className="fi fi-rr-list"></i>
-            </button>           
+              <i className="fi fi-rr-list"></i>
+            </button>
           </div>
         </div>
       </nav>

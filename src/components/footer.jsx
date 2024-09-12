@@ -1,6 +1,6 @@
-import React from 'react'
-import logo from '../assets/react.svg'
-import { Link } from 'react-router-dom'
+import React from "react";
+import logo from "../assets/react.svg";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -20,23 +20,34 @@ const Footer = () => {
                 alt="logo"
                 className="w-10 h-10 max-md:w-8 max-md:h-8 max-sm:w-5 max-sm:h-5"
               />
-              <span className="drop-shadow-lg font-playfair">Dream Comes True Travels</span>
+              <span className="drop-shadow-lg font-playfair">
+                Dream Comes True Travels
+              </span>
             </Link>
 
             {/* Description */}
             <div className="max-w-99 mt-4 grid grid-cols-1 justify-between min-h-40">
               <p className="mx-6 mb-5 max-md:mx-2 text-lg max-sm:text-sm text-gray-300/50">
-                Dream comes true travels offering you a wide range of national and international holiday packages to enjoy hassle-free holiday with your family and friends.
+                Dream comes true travels offering you a wide range of national
+                and international holiday packages to enjoy hassle-free holiday
+                with your family and friends.
               </p>
-              <Link to={'/term-conditions'} className="mx-6 max-md:mx-2 hover:underline max-sm:text-xs font-semibold ">
-                <span className='hover:text-neonGreen'>*Terms & Conditions with Cancellation Policy</span>
+              <Link
+                to={"/term-conditions"}
+                className="mx-6 max-md:mx-2 hover:underline max-sm:text-xs font-semibold "
+              >
+                <span className="hover:text-neonGreen">
+                  *Terms & Conditions with Cancellation Policy
+                </span>
               </Link>
             </div>
           </div>
 
           {/* Right Section (Contact Info) */}
           <div className="grid gap-6 grid-cols-1 text-lg max-md:text-base max-sm:text-sm">
-            <h1 className="text-2xl lg:text-4xl max-md:text-xl font-bold">Contact Info</h1>
+            <h1 className="text-2xl lg:text-4xl max-md:text-xl font-bold">
+              Contact Info
+            </h1>
 
             <p className="flex items-center">
               <i className="fi fi-sr-mobile mr-2"></i> +234 803 123 4567
@@ -47,12 +58,13 @@ const Footer = () => {
             </p>
 
             <p className="flex items-center">
-              <i className="fi fi-sr-location mr-2"></i> 123, Dreamland, Lagos, Nigeria
+              <i className="fi fi-sr-location mr-2"></i> 123, Dreamland, Lagos,
+              Nigeria
             </p>
 
             <p className="flex items-center">
-              <i className="fi fi-sr-alarm-clock mr-2"></i> 
-              <span>Monday - Friday: 9:00 AM - 5:00 PM</span> 
+              <i className="fi fi-sr-alarm-clock mr-2"></i>
+              <span>Monday - Friday: 9:00 AM - 5:00 PM</span>
             </p>
           </div>
         </div>
@@ -80,6 +92,6 @@ const Footer = () => {
       </div>
     </footer>
   );
-}
+};
 
-export default Footer
+export default Footer;
