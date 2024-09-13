@@ -1,19 +1,37 @@
-import React, { useState } from "react";
-import { Link, Outlet } from "react-router-dom";
+import React, { useState, useRef, useEffect } from "react";
+import { Link } from "react-router-dom";
 import logo from "../assets/react.svg";
 import MobileNavBarPanel from "./MobileNavBarPanel";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const dropdownRef = useRef(null);
+  const buttonRef = useRef(null);
 
-  const handleClick = () => {
-    console.log("clicked");
-    setIsOpen((preVal) => !preVal);
+  const handleClick = (e) => {
+    e.stopPropagation();
+    setIsOpen((prevVal) => !prevVal);
   };
 
-  const closeMenu = () => {
-    setIsOpen(false);
-  };
+  useEffect(() => {
+    const handleOutsideClick = (event) => {
+      if (
+        isOpen &&
+        dropdownRef.current &&
+        !dropdownRef.current.contains(event.target) &&
+        buttonRef.current &&
+        !buttonRef.current.contains(event.target)
+      ) {
+        setIsOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleOutsideClick);
+
+    return () => {
+      document.removeEventListener("mousedown", handleOutsideClick);
+    };
+  }, [isOpen]);
 
   return (
     <>
@@ -60,7 +78,7 @@ const Navbar = () => {
           </div>
 
           <div className="lg:hidden md:hidden text-white text-2xl">
-            <button onClick={handleClick}>
+            <button ref={buttonRef} onClick={handleClick}>
               <i className="fi fi-rr-list"></i>
             </button>
           </div>
@@ -69,12 +87,12 @@ const Navbar = () => {
         {/* Mobile responsive dropdown nav */}
         <div className="mx-2 my-auto relative">
           {isOpen && (
-            <MobileNavBarPanel IsOpen={isOpen} setIsOpen={setIsOpen} />
+            <div ref={dropdownRef}>
+              <MobileNavBarPanel IsOpen={isOpen} setIsOpen={setIsOpen} />
+            </div>
           )}
         </div>
       </nav>
-
-      {/* <Outlet /> */}
     </>
   );
 };

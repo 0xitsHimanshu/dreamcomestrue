@@ -7,7 +7,7 @@ const MobileNavBarPanel = ({ IsOpen, setIsOpen }) => {
   };
 
   return (
-    <div className="text-white absolute flex flex-col items-center my-2 gap-2 w-full bg-black/30 backdrop-blur-lg p-4 rounded-lg border border-gray-50/10 text-center">
+    <div className="text-white absolute flex flex-col items-center my-2 gap-2 w-full bg-black/30 backdrop-blur-lg p-4 rounded-3xl border border-gray-50/10 text-center">
       <Link
         to={"/"}
         onClick={closeMenu}
