@@ -17,4 +17,9 @@
         -ms-overflow-style: none;  /* IE and Edge */
         scrollbar-width: none;  /* Firefox */
   }
+  /* Add this to your CSS file or <style> tag */
+    .backdrop-blur-custom {
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px); /* WebKit fallback for older Safari */
+    }
 }

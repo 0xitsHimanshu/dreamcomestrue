@@ -1,17 +1,25 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link, Outlet } from "react-router-dom";
 import logo from "../assets/react.svg";
+import MobileNavBarPanel from "./MobileNavBarPanel";
 
 const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
   const handleClick = () => {
     console.log("clicked");
+    setIsOpen((preVal) => !preVal);
+  };
+
+  const closeMenu = () => {
+    setIsOpen(false);
   };
 
   return (
     <>
-      <nav className="fixed mx-auto lg:px-15 md:px-8 sm:px-6 px-4 py-3 items-center w-full z-50 ">
-        <div className="md:gap-1 mx-4 py-3 px-7 my-2 flex bg-black/30 items-center justify-between backdrop-blur-sm rounded-full border border-gray-50/10  ">
-          <div className=" flex flex-col max-md:line-clamp-1 self-stretch md:my-auto text-white">
+      <nav className="fixed mx-auto lg:px-15 md:px-8 sm:px-6 px-4 py-3 items-center w-full z-50">
+        <div className="md:gap-1 mx-4 py-3 px-7 my-2 flex bg-black/30 items-center justify-between backdrop-blur-sm rounded-full border border-gray-50/10">
+          <div className="flex flex-col max-md:line-clamp-1 self-stretch md:my-auto text-white">
             <Link
               to={"/"}
               className="flex items-center gap-4 lg:text-2xl max-sm:text-base text-xl font-bold"
@@ -51,11 +59,18 @@ const Navbar = () => {
             </Link>
           </div>
 
-          <div className="lg:hidden md:hidden text-white text-2xl  ">
+          <div className="lg:hidden md:hidden text-white text-2xl">
             <button onClick={handleClick}>
               <i className="fi fi-rr-list"></i>
             </button>
           </div>
+        </div>
+
+        {/* Mobile responsive dropdown nav */}
+        <div className="mx-2 my-auto relative">
+          {isOpen && (
+            <MobileNavBarPanel IsOpen={isOpen} setIsOpen={setIsOpen} />
+          )}
         </div>
       </nav>
 
