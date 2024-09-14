@@ -5,14 +5,16 @@ import background from '../assets/video.mp4';
 
 const AboutUspage = () => {
 
-    const heading = ""
+    const heading = "We are Dream Comes True Travels World class travel agency";
+    const paragraph = "Exprience the best travel with us";
+
 
     return (
         <div className="max-sm:h-[70%] max-h-[50%]">
             <section className="relative bg-cover bg-center">
             
-            <HeroSection background={background} heading={heading} />
-
+                <HeroSection background={background} heading={heading} paragraph={paragraph}/>
+            
             </section>
 
             <section className="w-full h-full bg-white">

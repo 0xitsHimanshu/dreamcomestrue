@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
 import logo from "../assets/react.svg";
 import MobileNavBarPanel from "./MobileNavBarPanel";
+import { AnimatePresence } from "framer-motion";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -86,11 +87,13 @@ const Navbar = () => {
 
         {/* Mobile responsive dropdown nav */}
         <div className="mx-2 my-auto relative">
-          {isOpen && (
-            <div ref={dropdownRef}>
-              <MobileNavBarPanel IsOpen={isOpen} setIsOpen={setIsOpen} />
-            </div>
-          )}
+          <AnimatePresence>
+            {isOpen && (
+              <div ref={dropdownRef}>
+                <MobileNavBarPanel IsOpen={isOpen} setIsOpen={setIsOpen} />
+              </div>
+            )}
+          </AnimatePresence>
         </div>
       </nav>
     </>

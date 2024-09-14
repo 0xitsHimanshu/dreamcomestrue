@@ -1,8 +1,11 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 const DestinationCard = ({ destination }) => {
   return (
-    <div className="relative rounded-lg overflow-hidden">
+    <div 
+      className="relative rounded-lg overflow-hidden"
+    >
       <img
         src={destination.image}
         alt={destination.name}

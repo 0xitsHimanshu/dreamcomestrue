@@ -1,13 +1,25 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 const MobileNavBarPanel = ({ IsOpen, setIsOpen }) => {
   const closeMenu = () => {
     setIsOpen(false);
   };
 
+  const variants = {
+    visible: { opacity: 1 },
+    hidden: { opacity: 0 },
+  }
+
   return (
-    <div className="text-white absolute flex flex-col items-center my-2 gap-2 w-full bg-black/30 backdrop-blur-lg p-4 rounded-3xl border border-gray-50/10 text-center">
+    <motion.div 
+      initial={{opacity: 0, y: -20}}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: -20 }}
+      transition={{ duration: 0.3 }}
+      className="text-white absolute flex flex-col items-center my-2 gap-2 w-full bg-black/30 backdrop-blur-lg p-4 rounded-3xl border border-gray-50/10 text-center"
+    >
       <Link
         to={"/"}
         onClick={closeMenu}
@@ -43,7 +55,7 @@ const MobileNavBarPanel = ({ IsOpen, setIsOpen }) => {
       >
         Take a Trip
       </Link>
-    </div>
+    </motion.div>
   );
 };
 
