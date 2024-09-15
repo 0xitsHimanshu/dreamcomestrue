@@ -1,6 +1,6 @@
 const ContactUs = () => {
   return (
-    <div className="mt-10 flex items-center justify-center max-md:px-8 max-sm:px-4 bg-blueGreen min-h-99">
+    <div className="flex items-center justify-center max-md:px-8 max-sm:px-4 bg-blueGreen min-h-99">
       <div className="grid grid-cols-1  items-center justify-between text-center h-80">
         <div className="font-playfair text-center text-white">
           <p className="font-bold text-4xl">Ready to go?</p>

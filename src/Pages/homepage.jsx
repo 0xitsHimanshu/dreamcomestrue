@@ -14,7 +14,7 @@ const Homepage = () => {
   return (
     <div className="max-sm:h-[70%]">
       <section className="relative bg-cover bg-center">
-        <HeroSection background={background} heading={heading} paragraph={paragraph} secPara={true} />
+        <HeroSection background={background} heading={heading} paragraph={paragraph} secPara={true} height={"h-screen"} />
         <FooterImage />
         <FooterContent />
       </section>

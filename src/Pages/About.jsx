@@ -2,6 +2,7 @@ import React from 'react'
 import ContactUs from '../components/ContactUs'
 import HeroSection from '../components/HeroSection';
 import background from '../assets/video.mp4';
+import FooterImage from '../components/stripeFooter';
 
 const AboutUspage = () => {
 
@@ -10,15 +11,20 @@ const AboutUspage = () => {
 
 
     return (
-        <div className="max-sm:h-[70%] max-h-[50%]">
+        <div className="max-sm:h-[70%]">             
             <section className="relative bg-cover bg-center">
             
-                <HeroSection background={background} heading={heading} paragraph={paragraph}/>
-            
+                <HeroSection background={background} heading={heading} paragraph={paragraph} height={"h-75%99999999999999999999999999ok, /=p"}/>
+
+                <div className="relative w-full h-60 z-20">
+                    <div className="w-full h-full absolute left-0 bg-[#1e1e1e] z-10">q
+                    
+                    </div>
+                </div>
+                <ContactUs />
             </section>
 
             <section className="w-full h-full bg-white">
-                <ContactUs />
             </section>
         </div>
     )

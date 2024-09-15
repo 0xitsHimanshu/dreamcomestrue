@@ -1,7 +1,7 @@
 
-const HeroSection = ({background, heading, paragraph, secPara=false}) => {
+const HeroSection = ({background, heading, paragraph, secPara=false, height}) => {
   return (
-    <div className="relative h-screen max-sm:h-[50%] w-full">
+    <div className={`relative ${height} max-sm:h-[50%] w-full`}>
       <video
         className="absolute inset-0 w-full h-full object-cover"
         src={background}
