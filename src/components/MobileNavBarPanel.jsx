@@ -23,28 +23,28 @@ const MobileNavBarPanel = ({ IsOpen, setIsOpen }) => {
       <Link
         to={"/"}
         onClick={closeMenu}
-        className="self-stretch text-2xl font-semibold my-auto border-b border-gray-50/70 pb-3"
+        className="self-stretch text-2xl font-semibold mx-6 my-auto border-b border-gray-50/20 pb-3"
       >
         Home
       </Link>
       <Link
         to={"/about"}
         onClick={closeMenu}
-        className="self-stretch text-2xl font-semibold my-auto border-b border-gray-50/70 pb-3"
+        className="self-stretch text-2xl font-semibold mx-6 my-auto border-b border-gray-50/20 pb-3"
       >
-        About
+        About Us
       </Link>
       <Link
         to={"/blog"}
         onClick={closeMenu}
-        className="self-stretch text-2xl font-semibold my-auto border-b border-gray-50/70 pb-3"
+        className="self-stretch text-2xl font-semibold mx-6 my-auto border-b border-gray-50/20 pb-3"
       >
         Blog
       </Link>
       <Link
         to={"/contact"}
         onClick={closeMenu}
-        className="self-stretch text-2xl font-semibold my-auto border-b border-gray-50/70 pb-3"
+        className="self-stretch text-2xl font-semibold mx-6 my-auto border-b border-gray-50/20 pb-3 mb-4"
       >
         Contact Us
       </Link>

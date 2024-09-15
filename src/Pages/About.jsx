@@ -1,44 +1,59 @@
-import React from 'react'
-import ContactUs from '../components/ContactUs'
-import HeroSection from '../components/HeroSection';
-import background from '../assets/video.mp4';
-import FooterImage from '../components/stripeFooter';
+import React from "react";
+import ContactUs from "../components/ContactUs";
+import HeroSection from "../components/HeroSection";
+import background from "../assets/video.mp4";
 
 const AboutUspage = () => {
+  const heading = (
+    <>
+      We are <span className="text-neonGreen">Dream Comes True Travels</span>{" "}
+      world-class travel agency.
+    </>
+  );
+  const paragraph = '"Where travel dreams come alive."';
 
-    const heading = "We are Dream Comes True Travels World class travel agency";
-    const paragraph = "Exprience the best travel with us";
+  return (
+    <div className="max-sm:h-[70%]">
+      <section className="relative bg-cover bg-center">
+        <HeroSection
+          background={background}
+          heading={heading}
+          paragraph={paragraph}
+          height={"h-101"}
+        />
 
-
-    return (
-        <div className="max-sm:h-[70%]">             
-            <section className="relative bg-cover bg-center">
-            
-                <HeroSection background={background} heading={heading} paragraph={paragraph} height={"h-75%99999999999999999999999999ok, /=p"}/>
-
-                <div className="relative w-full h-60 z-20">
-                    <div className="w-full h-full absolute left-0 bg-[#1e1e1e] z-10">q
-                    
-                    </div>
-                </div>
-                <ContactUs />
-            </section>
-
-            <section className="w-full h-full bg-white">
-            </section>
+        {/* Responsive Section */}
+        <div className="relative w-full min-h-[35vh] max-sm:min-h-[45vh] bg-[#1e1e1e] z-20 flex items-center justify-center">
+          <div className="w-full h-auto py-5 px-3 absolute left-0 bg-[#1e1e1e] z-10 flex items-center justify-center">
+            <div className="w-[50%] my-1 flex flex-col items-center justify-center text-justify text-white max-md:w-[70%] max-sm:w-[90%] max-sm:px-4 overflow-wrap break-word">
+              <h1 className="text-4xl pb-2 font-semibold max-md:text-3xl max-sm:text-xl line-clamp-1">
+                Dream comes true travels.
+              </h1>
+              <p className="text-lg max-md:text-base max-sm:text-xs">
+                At Dream Comes True Travels, we believe that travel is the one thing
+                you buy that truly enriches your life. We are committed to turning your
+                travel dreams into unforgettable experiences that stay with you forever.
+                With years of expertise, we specialize in offering customized holiday
+                packages, affordable travel deals, and a wide range of essential travel
+                services designed to meet every need. Our goal is to inspire you to live
+                a life full of extraordinary journeys. Whether you're looking for luxury
+                travel experiences, budget-friendly vacations, or adventure-filled
+                escapes, we have the perfect package for you. We offer exclusive discounts
+                on our top-rated tour packages for loyal customers who choose our services
+                time and again. Let Dream Comes True Travels be more than just your travel
+                agency—we aim to be your trusted travel partner for life.
+              </p>
+            </div>
+          </div>
         </div>
-    )
-}
+      </section>
+
+      {/* Contact Us Section */}
+      <section className="w-full h-full bg-white">
+        <ContactUs />
+      </section>
+    </div>
+  );
+};
 
 export default AboutUspage;
-/*
-    ABOUT US
-Dream Comes True Travels
-
-“Travel is the main thing you purchase that makes you more extravagant”. We, at ‘Dream Comes True Travels’, swear by this and put stock in satisfying travel dreams that make you perpetually rich constantly.
-
-We have been moving excellent encounters for a considerable length of time through our cutting-edge planned occasion bundles and other fundamental travel administrations. We rouse our clients to carry on with a rich life, brimming with extraordinary travel encounters.
-
-We offer the best limits on our top-rated visit bundles to clients who pick our viable administrations over and over. How about we remind you indeed that we don’t expect to be your visit and travel specialists; we endeavor to be your vacation accomplices until the end of time.
-
-*/
