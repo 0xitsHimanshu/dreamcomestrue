@@ -30,18 +30,20 @@ const AboutUspage = () => {
                 Dream comes true travels.
               </h1>
               <p className="text-lg max-md:text-base max-sm:text-xs">
-                At Dream Comes True Travels, we believe that travel is the one thing
-                you buy that truly enriches your life. We are committed to turning your
-                travel dreams into unforgettable experiences that stay with you forever.
-                With years of expertise, we specialize in offering customized holiday
-                packages, affordable travel deals, and a wide range of essential travel
-                services designed to meet every need. Our goal is to inspire you to live
-                a life full of extraordinary journeys. Whether you're looking for luxury
-                travel experiences, budget-friendly vacations, or adventure-filled
-                escapes, we have the perfect package for you. We offer exclusive discounts
-                on our top-rated tour packages for loyal customers who choose our services
-                time and again. Let Dream Comes True Travels be more than just your travel
-                agency—we aim to be your trusted travel partner for life.
+                At Dream Comes True Travels, we believe that travel is the one
+                thing you buy that truly enriches your life. We are committed to
+                turning your travel dreams into unforgettable experiences that
+                stay with you forever. With years of expertise, we specialize in
+                offering customized holiday packages, affordable travel deals,
+                and a wide range of essential travel services designed to meet
+                every need. Our goal is to inspire you to live a life full of
+                extraordinary journeys. Whether you're looking for luxury travel
+                experiences, budget-friendly vacations, or adventure-filled
+                escapes, we have the perfect package for you. We offer exclusive
+                discounts on our top-rated tour packages for loyal customers who
+                choose our services time and again. Let Dream Comes True Travels
+                be more than just your travel agency—we aim to be your trusted
+                travel partner for life.
               </p>
             </div>
           </div>
