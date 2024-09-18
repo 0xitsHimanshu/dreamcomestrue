@@ -5,16 +5,29 @@ const HeroSection = ({
   secPara = false,
   height,
 }) => {
+
+  const isImage = /\.(jpg|jpeg|png|gif|bmp|svg)$/i.test(background);
   return (
     <div className={`relative ${height} max-sm:h-[50%] w-full`}>
-      <video
-        className="absolute inset-0 w-full h-full object-cover"
-        src={background}
-        autoPlay
-        loop
-        muted
-        playsInline
-      ></video>
+      {
+        isImage ? (
+          <img
+            className="absolute inset-0 w-full h-full object-cover"
+            src={background}
+            alt="Background"
+          />
+        ) : (
+          <video
+            className="absolute inset-0 w-full h-full object-cover"
+            src={background}
+            autoPlay
+            loop
+            muted
+            playsInline
+          ></video>
+        )
+      }
+      
 
       <div className="absolute inset-0 bg-gradient-radial from-transparent to-black pointer-events-none"></div>
 

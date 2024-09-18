@@ -53,6 +53,7 @@ const AboutUspage = () => {
       {/* Contact Us Section */}
       <section className="w-full h-full bg-white">
         <ContactUs />
+        
       </section>
     </div>
   );
