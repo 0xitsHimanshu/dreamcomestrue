@@ -4,24 +4,24 @@ import { Link } from 'react-router-dom';
 const BlogCard = ({ id, date, title, excerpt, imageUrl }) => (
     <div
         id={`post-${id}`} 
-        className="mx-auto my-8 w-98 transition-transform duration-500 ease-in-out hover:-translate-y-2 hover:drop-shadow-[0_10px_15px_rgba(0,0,0,0.25)] max-md:w-80 max-sm:w-80"
+        className="mx-auto my-8 w-98 h-full  transition-transform duration-500 ease-in-out hover:-translate-y-2 hover:drop-shadow-[0_10px_15px_rgba(0,0,0,0.25)] max-md:w-80 max-sm:w-80"
     >
-        <div className="bg-white shadow-md rounded-lg overflow-hidden border border-gray-400/50 h-full">
+        <div className="bg-white shadow-md rounded-lg overflow-hidden border border-gray-400/50">
             <div className="relative">
-                <img src={imageUrl} alt={title} className="object-cover w-full h-48 max-md:h-36 max-sm:h-28" />
+                <img src={imageUrl} alt={title} className="object-cover w-full h-full max-md:h-36 max-sm:h-28" />
                 <div className="absolute inset-0 bg-black bg-opacity-20"></div>
             </div>
-            <div className="p-4 max-sm:p-3">
+            <div className="p-4 max-sm:p-3 gap-4 flex flex-col justify-between">
              <div className="text-sm text-gray-600 mb-1 max-md:text-xs">{date}</div>
-                <h2 className="text-lg font-semibold mb-1 max-md:text-base max-sm:text-sm">
+                <h1 className="text-2xl font-semibold mb-1 max-md:text-xl max-sm:text-lg line-clamp-2">
                     <a href="#" className="hover:text-blue-600">{title}</a>
-                </h2>
-            <p className="text-gray-700 mb-3 line-clamp-2 max-md:text-sm max-sm:text-xs">
-                {excerpt}
-            </p>
-            <Link to="#" className="text-gray-600 font-semibold text-sm hover:underline">
-                Read More<span className="ml-1">→</span>
-            </Link>
+                </h1>
+                <p className="text-gray-700 mb-3 line-clamp-2 max-md:text-lg max-sm:text-sm">
+                    {excerpt}
+                </p>
+                <Link to="#" className="text-gray-600 font-semibold text-lg hover:underline">
+                    Read More<span className="ml-1">→</span>
+                </Link>
             </div>
         </div>
     </div>
