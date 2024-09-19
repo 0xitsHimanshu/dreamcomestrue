@@ -10,7 +10,11 @@ const AboutUspage = () => {
       world-class travel agency.
     </>
   );
-  const paragraph = '"Where travel dreams come alive."';
+  const paragraph = (
+    <>
+      <span className="italic">"Where travel dreams come alive"</span>
+    </>
+  );
 
   return (
     <div className="max-sm:h-[70%]">
@@ -26,7 +30,7 @@ const AboutUspage = () => {
         <div className="relative w-full min-h-[35vh] max-sm:min-h-[45vh] bg-[#1e1e1e] z-20 flex items-center justify-center">
           <div className="w-full h-auto py-5 px-3 absolute left-0 bg-[#1e1e1e] z-10 flex items-center justify-center">
             <div className="w-[50%] my-1 flex flex-col items-center justify-center text-justify text-white max-md:w-[70%] max-sm:w-[90%] max-sm:px-4 overflow-wrap break-word">
-              <h1 className="text-4xl pb-2 font-semibold max-md:text-3xl max-sm:text-xl line-clamp-1">
+              <h1 className="text-4xl pb-2 font-semibold max-md:text-3xl max-sm:text-xl line-clamp-1 capitalize">
                 Dream comes true travels.
               </h1>
               <p className="text-lg max-md:text-base max-sm:text-xs">
@@ -53,7 +57,7 @@ const AboutUspage = () => {
       {/* Contact Us Section */}
       <section className="w-full h-full bg-white">
         <ContactUs />
-        
+
       </section>
     </div>
   );

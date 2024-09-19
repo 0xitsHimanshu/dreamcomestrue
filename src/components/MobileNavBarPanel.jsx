@@ -28,18 +28,18 @@ const MobileNavBarPanel = ({ IsOpen, setIsOpen }) => {
         Home
       </Link>
       <Link
-        to={"/about"}
-        onClick={closeMenu}
-        className="self-stretch text-2xl font-semibold mx-6 my-auto border-b border-gray-50/20 pb-3"
-      >
-        About Us
-      </Link>
-      <Link
         to={"/blog"}
         onClick={closeMenu}
         className="self-stretch text-2xl font-semibold mx-6 my-auto border-b border-gray-50/20 pb-3"
       >
         Blog
+      </Link>
+      <Link
+        to={"/about"}
+        onClick={closeMenu}
+        className="self-stretch text-2xl font-semibold mx-6 my-auto border-b border-gray-50/20 pb-3"
+      >
+        About
       </Link>
       <Link
         to={"/contact"}
@@ -48,6 +48,7 @@ const MobileNavBarPanel = ({ IsOpen, setIsOpen }) => {
       >
         Contact Us
       </Link>
+      
       <Link
         to={"/trip"}
         onClick={closeMenu}
