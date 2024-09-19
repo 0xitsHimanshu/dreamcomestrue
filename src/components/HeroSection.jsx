@@ -32,12 +32,12 @@ const HeroSection = ({
       <div className="absolute inset-0 bg-gradient-radial from-transparent to-black pointer-events-none"></div>
 
       {/* Content */}
-      <div className="relative z-10 text-white flex flex-col gap-8 justify-center h-full container max-sm:pt-10 mx-auto px-4 sm:px-8">
-        <div className="text-center py-28">
+      <div className="relative z-10 text-white flex flex-col justify-center h-full container max-sm:pt-10 mx-auto px-4 sm:px-8 max-sm:gap-12">
+        <div className="text-center py-28 max-sm:text-left flex flex-col justify-between gap-6">
           <h1 className="font-bold font-serif text-4xl max-sm:text-3xl sm:text-5xl md:text-6xl lg:text-7xl">
             {heading}
           </h1>
-          <p className="mt-4 text-lg sm:text-xl md:text-2xl font-thin">
+          <p className="mt-4 text-2xl max-sm:text-sm md:text-2xl font-thin">
             {paragraph}
           </p>
           {secPara ? (

@@ -1,9 +1,9 @@
 import { Route, Routes } from 'react-router-dom'
 import Navbar from './components/navbar'
 import Homepage from './Pages/Homepage'
-import AboutUspage from './Pages/About'
-import BlogPage from './Pages/Blog'
-import ContactPage from './Pages/Contact'
+import AboutUspage from './Pages/AboutPage'
+import BlogPage from './Pages/BlogPage'
+import ContactPage from './Pages/ContactPage'
 import Footer from './components/footer'
 
 function App() {

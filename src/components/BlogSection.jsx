@@ -69,8 +69,8 @@ const BlogSection = () => {
       ];
 
   return (
-    <div className='w-full h-full my-12'>
-        <div className=' px-auto grid justify-center items-center grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 max-sm:gap-6 overflow-hidden'>
+    <div className='w-full h-full my-12 px-auto'>
+        <div className='px-auto grid grid-cols-1 items-center justify-center md:grid-cols-2 lg:grid-cols-3 gap-2 max-sm:gap-2 overflow-hidden'>
             {
                 blogPosts.map((post) => (
                     <BlogCard key={post.id} {...post} />
