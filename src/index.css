@@ -16,10 +16,18 @@
     .no-scrollbar {
         -ms-overflow-style: none;  /* IE and Edge */
         scrollbar-width: none;  /* Firefox */
-  }
-  /* Add this to your CSS file or <style> tag */
+    }
+     /* Add this to your CSS file or <style> tag */
     .backdrop-blur-custom {
         backdrop-filter: blur(10px);
         -webkit-backdrop-filter: blur(10px); /* WebKit fallback for older Safari */
     }
+    
+    .input-box {
+        @apply mt-1 px-2 block w-full h-12 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm;
+    }
+
+    .bottom-shadow {
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+      }
 }

@@ -1,9 +1,16 @@
 import React, { useState } from "react";
 import HeroSection from "../components/HeroSection";
-import background from "../assets/video.mp4"
+import background from "../assets/video.mp4";
+import { Link, useNavigate } from "react-router-dom";
+import WhatsAppBtn from "../components/WhatsAppBtn";
 
 const ContactPage = () => {
-    const heading  = "Conctact Us"
+  const heading = (
+    <>
+      "Ready for a trip. <span className="text-neonGreen">Connect</span> with
+      Us!"
+    </>
+  );
   const [formData, setFormData] = useState({
     fullName: "",
     email: "",
@@ -35,20 +42,35 @@ const ContactPage = () => {
     "Himalayan Trek",
   ];
 
+  const contactNum = "+919899066493";
+
   return (
     <div className="max-sm:h-[70%] ">
       <section className="relative bg-cover bg-center">
+        <HeroSection
+          background={background}
+          heading={heading}
+          height={"h-100"}
+        />
 
-        <HeroSection background={background} heading={heading}  height={"h-100"}/>
+        <div className="relative top-0 w-full min-h-[15vh] max-sm:min-h-[15vh] bg-[#1e1e1e] z-20 flex items-center justify-center">
+          <div className="w-full h-auto py-5 px-3 absolute left-0 bg-[#1e1e1e] z-10 flex items-center justify-center">
+            <div className="w-[50%] my-1 flex flex-col items-center justify-center text-justify text-white max-md:w-[70%] max-sm:w-[90%] max-sm:px-4 overflow-wrap break-word">
+              <h1 className="text-4xl pb-2 font-bold max-md:text-3xl max-sm:text-xl line-clamp-1 text-White">
+                Connect with us! 
+              </h1>
+            </div>
+          </div>
+        </div>
 
-        <div className="min-h-screen bg-gray-200/50  flex flex-col items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
-
+        <div className="min-h-[85%] bg-gray-200/50  flex flex-col items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
           <div className="max-w-2xl w-full bg-white shadow-md rounded-lg p-8">
-            <h2 className="text-3xl font-bold text-center text-gray-900 mb-2">
+            <h1 className="text-5xl font-bold text-center text-gray-900 mb-2">
               Contact Us
-            </h2>
-            <p className="text-center text-gray-600 mb-8">
-              Experience the unique Nature Stays offered by Dream Comes True Travels
+            </h1>
+            <p className="text-center text-gray-600 mb-8 pb-6 border-b border-gray-300 bottom-shadow">
+              Experience the unique Nature Stays offered by Dream Comes True
+              Travels
             </p>
 
             <form onSubmit={handleSubmit} className="space-y-6">
@@ -64,7 +86,7 @@ const ContactPage = () => {
                   name="fullName"
                   id="fullName"
                   required
-                  className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                  className="input-box"
                   placeholder="Enter Your Name"
                   value={formData.fullName}
                   onChange={handleChange}
@@ -83,7 +105,7 @@ const ContactPage = () => {
                   name="email"
                   id="email"
                   required
-                  className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                  className="input-box"
                   placeholder="Enter Your Email ID"
                   value={formData.email}
                   onChange={handleChange}
@@ -102,7 +124,7 @@ const ContactPage = () => {
                   name="phoneNumber"
                   id="phoneNumber"
                   required
-                  className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                  className="input-box"
                   placeholder="Enter Your Phone Number"
                   value={formData.phoneNumber}
                   onChange={handleChange}
@@ -120,7 +142,8 @@ const ContactPage = () => {
                   name="interestedIn"
                   id="interestedIn"
                   required
-                  className="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md"
+                  className="mt-1 block w-full h-12 pl-3 pr-10 mr-12 py-2 text-base border border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md"
+                  //   className="input-box pl-3 pr-10 py-2 text-base"
                   value={formData.interestedIn}
                   onChange={handleChange}
                 >
@@ -144,7 +167,7 @@ const ContactPage = () => {
                   name="numberOfPerson"
                   id="numberOfPerson"
                   required
-                  className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                  className="input-box placeholder-opacity-80"
                   placeholder="1 person"
                   value={formData.numberOfPerson}
                   onChange={handleChange}
@@ -154,7 +177,7 @@ const ContactPage = () => {
               <div>
                 <button
                   type="submit"
-                  className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-black bg-neonGreen hover:bg-neonGreen focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-black"
+                  className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-[#1e1e1e] hover:bg-[#1e1e1e]/90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-black"
                 >
                   Send Message
                 </button>
@@ -168,24 +191,28 @@ const ContactPage = () => {
             )}
           </div>
 
-          <div className="fixed bottom-4 left-4">
-            <button className="bg-green-500 text-white rounded-full p-4 shadow-lg hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-6 w-6"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
+            {/* Contact us through call or whatsApp */}
+
+          <div className="max-w-2xl w-full bg-white shadow-md rounded-lg p-8 mt-8">
+            <h2 className="text-3xl font-bold text-center text-gray-900 mb-2">
+              Or Call Us
+            </h2>
+            <p className="text-center text-gray-600 mb-8">
+              Prefer to speak with us directly? Give us a call at:
+            </p>
+            <div className="flex justify-center items-center">
+              <a
+                href="tel:+1234567890"
+                className="text-2xl font-bold text-blueGrey hover:underline mx-auto gap-2 "
               >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"
-                />
-              </svg>
-            </button>
+                <i className="fi fi-sr-phone-call"></i>
+                <span>
+                    {contactNum}
+                </span>
+              </a>
+            </div>
           </div>
+          <WhatsAppBtn number={"918860726472"} message={"Hi Dream Comes True Travel"} />
         </div>
       </section>
     </div>
