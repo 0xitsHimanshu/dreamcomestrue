@@ -51,7 +51,7 @@ const Footer = () => {
 
             <p className="flex items-center">
               <i className="fi fi-br-phone-call mr-2 text-xl"></i> 
-              <span>+234 803 123 4567</span>
+              <span>+918860726472</span>
             </p>
 
             <p className="flex items-center">
@@ -61,7 +61,7 @@ const Footer = () => {
 
             <p className="flex items-center">
               <i className="fi fi-br-land-layer-location mr-2 text-xl"></i> 
-              <span>123, Dreamland, Lagos, Nigeria</span>
+              <span>Floor - 1, 13 Block/157, Trilok Puri, Delhi, India</span>
             </p>
 
             <p className="flex items-center">
@@ -78,7 +78,7 @@ const Footer = () => {
         {/* Bottom section with copyright and social icons */}
         <div className="flex flex-wrap justify-between items-center">
           <p className="text-sm text-gray-400 mb-4 md:mb-0">
-            copyright@ prydetravel 2023
+            copyright@ Dream Comes True Travel 2018
           </p>
           <div className="flex space-x-4">
             <a href="#" className="hover:text-[#c5f82a]">
