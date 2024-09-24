@@ -37,7 +37,7 @@ const Navbar = () => {
   return (
     <>
       <nav className="fixed mx-auto lg:px-15 md:px-8 sm:px-6 px-4 py-3 items-center w-full z-50">
-        <div className="md:gap-1 mx-4 py-3 px-7 my-2 flex bg-black/30 items-center justify-between backdrop-blur-sm rounded-full border border-gray-50/10">
+        <div className="md:gap-1 mx-4 py-3 px-16 max-sm:px-6 my-2 flex bg-black/30 items-center justify-between backdrop-blur-lg rounded-full border border-gray-50/10">
           <div className="flex flex-col max-md:line-clamp-1 self-stretch md:my-auto text-white">
             <Link
               to={"/"}
@@ -72,15 +72,15 @@ const Navbar = () => {
             </Link>
             <Link
               to={"/trip"}
-              className="gap-2.5 lg:px-10 lg:py-3.5 px-8 py-1.5 border-2 border-white border-solid rounded-full max-md:px-5 line-clamp-1 hover:underline"
+              className="gap-2.5 lg:px-10 lg:py-3.5 px-8 py-1.5 border-2 border-neonGreen bg-neonGreen text-black border-solid rounded-full max-md:px-5 line-clamp-1 hover:underline"
             >
               Take a Trip
             </Link>
           </div>
 
-          <div className="lg:hidden md:hidden text-white text-2xl">
+          <div className={"lg:hidden md:hidden "+ ( isOpen ? "text-neonGreen" : "text-white" ) + " text-2xl"}>
             <button ref={buttonRef} onClick={handleClick}>
-              <i className="fi fi-rr-list"></i>
+              <i className="fi fi-rr-list "></i>
             </button>
           </div>
         </div>

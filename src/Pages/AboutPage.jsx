@@ -17,7 +17,7 @@ const AboutUspage = () => {
   );
 
   return (
-    <div className="max-sm:h-[70%]">
+    <div className="max-sm:h-[70%z">
       <section className="relative bg-cover bg-center">
         <HeroSection
           background={background}
