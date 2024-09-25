@@ -1,6 +1,12 @@
+import { useNavigate } from "react-router-dom";
 import cardImg from "../assets/cardImage.png";
 
 const TakeTrip = () => {
+  const navigate = useNavigate();
+  
+  const handleTakeTripClick = () => {
+    navigate("/packages");
+  }
   return (
     <>
       {/* Take trip btn with p  */}
@@ -16,7 +22,7 @@ const TakeTrip = () => {
 
         {/* Take trip btn*/}
         <div className="max-sm:flex max-sm:justify-center">
-          <button className="bg-neonGreen text-blueGrey py-3 px-9 rounded-full font-semibold flex items-center justify-center gap-3">
+          <button className="bg-neonGreen text-blueGrey py-3 px-9 rounded-full font-semibold flex items-center justify-center gap-3" onClick={handleTakeTripClick}>
             <span>Take a trip</span>
             <span className="flex items-center">
               <i className="fi fi-rr-arrow-right text-xl"></i>

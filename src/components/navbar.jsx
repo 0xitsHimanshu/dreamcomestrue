@@ -71,7 +71,7 @@ const Navbar = () => {
               Contact Us
             </Link>
             <Link
-              to={"/trip"}
+              to={"/packages"}
               className="gap-2.5 lg:px-10 lg:py-3.5 px-8 py-1.5 border-2 border-neonGreen bg-neonGreen text-black border-solid rounded-full max-md:px-5 line-clamp-1 hover:underline"
             >
               Take a Trip

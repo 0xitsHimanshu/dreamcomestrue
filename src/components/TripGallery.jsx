@@ -2,6 +2,7 @@ import tajImage from "../assets/taj-mahal.jpg";
 import eifleImage from "../assets/eifle-tower.jpg";
 import kajuruImage from "../assets/kajuru-castle.jpg";
 import cardImg from "../assets/cardImage.png";
+import { useNavigate } from "react-router-dom";
 
 const TripCard = ({ preview, title, location, trips, className }) => {
   return (
@@ -24,6 +25,12 @@ const TripCard = ({ preview, title, location, trips, className }) => {
 };
 
 const TripGallery = () => {
+  const navigate = useNavigate();
+
+  const handleSeeAllJourneys = () => {
+    navigate("/trip-gallery");
+  };
+
   const trips = [
     {
       preview: eifleImage,
@@ -88,7 +95,10 @@ const TripGallery = () => {
 
       {/* Button Section */}
       <div className="mt-10">
-        <button className="bg-neonGreen text-black py-2 px-6 rounded-full font-semibold flex items-center max-sm:px-4 max-sm:py-3">
+        <button
+          className="bg-neonGreen text-black py-2 px-6 rounded-full font-semibold flex items-center max-sm:px-4 max-sm:py-3"
+          onClick={handleSeeAllJourneys}
+        >
           See all journeys
           <i className="fi fi-br-arrow-right ml-2"></i>
         </button>
