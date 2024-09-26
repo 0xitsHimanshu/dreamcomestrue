@@ -1,18 +1,25 @@
-import React from 'react';
+import React from "react";
+import termsAndConditions from "../lib/term&Condition.js" // Adjust the path as necessary
+
 
 const TermsAndConditions = () => {
     return (
-        <div>
-            <h1>Terms and Conditions</h1>
-            <p>Welcome to our application. Please read these terms and conditions carefully before using our services.</p>
-            <h2>1. Acceptance of Terms</h2>
-            <p>By accessing and using our services, you accept and agree to be bound by the terms and provision of this agreement.</p>
-            <h2>2. Changes to Terms</h2>
-            <p>We reserve the right to modify these terms at any time. You should check this page regularly to take notice of any changes we may have made to the Terms of Service.</p>
-            <h2>3. Privacy Policy</h2>
-            <p>Your privacy is very important to us. Please review our Privacy Policy to understand our practices.</p>
-            <h2>4. Contact Us</h2>
-            <p>If you have any questions about these Terms, please contact us at support@example.com.</p>
+        <div className="relative bg-cover bg-center flex flex-col items-center justify-center px-6 py-28 text-justify">
+            <div>
+                <h1>{termsAndConditions.title}</h1>
+                {termsAndConditions.sections.map((section, index) => (
+                    <div key={index} className="line-clamp-2 text-2xl">
+                        <div className=" flex gap-3">
+                            <span>{section.number}.</span>
+                            <span>{section.title}</span>
+                        </div>
+                        <p
+                            className="px-6"
+                        >{section.content}
+                        </p>
+                    </div>
+                ))}
+            </div>
         </div>
     );
 };

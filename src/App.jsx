@@ -7,6 +7,7 @@ import ContactPage from './Pages/ContactPage'
 import Footer from './components/footer'
 import TermsAndConditions from './components/termAndCondition'
 import TripGalleryPage from './Pages/TripGalleryPage'
+import TermPages from './Pages/TermPages'
 
 function App() {
 
@@ -21,7 +22,7 @@ function App() {
                   <Route path="/about" element={<AboutUspage />} />
                   <Route path="/blog" element={<BlogPage />} />
                   <Route path="/contact" element={<ContactPage />} />
-                  <Route path='/term-conditions' element={<TermsAndConditions />} />
+                  <Route path='/term-conditions' element={<TermPages />} />
                   <Route path="/trip" element={<h1>take trip with us</h1>} />
                   <Route path='/packages' element={<h1>packages</h1>} />
                   <Route path='/trip-gallery' element={<TripGalleryPage />} />
