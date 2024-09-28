@@ -192,17 +192,17 @@ const ContactPage = () => {
           </div>
 
             {/* Contact us through call or whatsApp */}
-
+            <div className="border-b border-gray-300 w-full"></div>
           <div className="max-w-2xl w-full bg-white shadow-md rounded-lg p-8 mt-8">
-            <h2 className="text-3xl font-bold text-center text-gray-900 mb-2">
+            <h2 className="text-3xl font-bold text-center text-blueGrey mb-2 font-playfair">
               Or Call Us
             </h2>
-            <p className="text-center text-gray-600 mb-8">
+            <p className="text-center text-gray-600 mb-8 font-playfair">
               Prefer to speak with us directly? Give us a call at:
             </p>
-            <div className="flex justify-center items-center">
+            <div className="flex justify-center items-center font-mono">
               <a
-                href="tel:+1234567890"
+                href={`tel:${contactNum}`}
                 className="text-2xl font-bold text-blueGrey hover:underline mx-auto gap-2 "
               >
                 <i className="fi fi-sr-phone-call"></i>
