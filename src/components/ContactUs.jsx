@@ -1,14 +1,12 @@
 import { useNavigate } from "react-router-dom";
 
-
 const ContactUs = () => {
-  
   const navigate = useNavigate();
-  
+
   const ContactUsNav = () => {
     const path = "/contact";
     navigate(path);
-  }
+  };
 
   return (
     <div className="flex items-center justify-center max-md:px-8 max-sm:px-4 bg-blueGreen min-h-99">
@@ -19,7 +17,10 @@ const ContactUs = () => {
             Give us a quick call
           </h1>
         </div>
-        <button className="bg-neonGreen px-4 py-2 rounded-full w-52 mx-auto" onClick={ContactUsNav} > 
+        <button
+          className="bg-neonGreen px-4 py-2 rounded-full w-52 mx-auto transition-colors duration-300 ease-in-out hover:bg-lime-500 font-playfair"
+          onClick={ContactUsNav}
+        >
           <span className="font-semibold">Contact us</span>
           <i className="fi fi-br-arrow-right ml-2"></i>
         </button>

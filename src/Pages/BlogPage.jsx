@@ -3,6 +3,7 @@ import HeroSection from "../components/HeroSection";
 // import background from "../assets/bg-Image1.png";
 import background from "../assets/video.mp4"
 import BlogSection from "../components/BlogSection";
+import ContactUs from "../components/ContactUs";
 
 const BlogPage = () => {
     const heading = "Blogs";
@@ -18,8 +19,8 @@ const BlogPage = () => {
         />
         <div className="relative top-0 w-full min-h-[15vh] max-sm:min-h-[15vh] bg-[#1e1e1e] z-20 flex items-center justify-center">
           <div className="w-full h-auto py-5 px-3 absolute left-0 bg-[#1e1e1e] z-10 flex items-center justify-center">
-            <div className="w-[50%] my-1 flex flex-col items-center justify-center text-justify text-white max-md:w-[70%] max-sm:w-[90%] max-sm:px-4 overflow-wrap break-word">
-              <h1 className="text-4xl pb-2 font-semibold max-md:text-3xl max-sm:text-xl line-clamp-1 text-neonGreen">
+            <div className="w-[50%] my-1 flex flex-col items-center justify-center text-justify text-white max-md:w-[70%] max-sm:w-[90%] max-sm:px-4 overflow-wrap break-word font-playfair">
+              <h1 className="text-4xl pb-2 font-semibold max-md:text-3xl max-sm:text-xl line-clamp-1">
                 Latest Blogs
               </h1>
             </div>
@@ -31,6 +32,7 @@ const BlogPage = () => {
       {/* Contact Us Section */}
       <section className="w-full h-full bg-white min-h-screen">
         <BlogSection />
+        <ContactUs />
       </section>
     </div>
   );

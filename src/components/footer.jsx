@@ -45,7 +45,7 @@ const Footer = () => {
 
           {/* Right Section (Contact Info) */}
           <div className="grid gap-6 grid-cols-1 text-lg max-md:text-base max-sm:text-sm">
-            <h1 className="text-2xl lg:text-4xl max-md:text-xl font-bold">
+            <h1 className="text-2xl lg:text-4xl max-md:text-xl font-bold font-playfair">
               Contact Info
             </h1>
 
@@ -78,7 +78,7 @@ const Footer = () => {
         {/* Bottom section with copyright and social icons */}
         <div className="flex flex-wrap justify-between items-center">
           <p className="text-sm text-gray-400 mb-4 md:mb-0">
-            copyright@ Dream Comes True Travel 2018
+            Copyright @Dream Comes True Travel 2018
           </p>
           <div className="flex space-x-4">
             <a href="#" className="hover:text-[#c5f82a]">

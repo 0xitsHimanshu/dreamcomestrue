@@ -55,9 +55,9 @@ const ContactPage = () => {
 
         <div className="relative top-0 w-full min-h-[15vh] max-sm:min-h-[15vh] bg-[#1e1e1e] z-20 flex items-center justify-center">
           <div className="w-full h-auto py-5 px-3 absolute left-0 bg-[#1e1e1e] z-10 flex items-center justify-center">
-            <div className="w-[50%] my-1 flex flex-col items-center justify-center text-justify text-white max-md:w-[70%] max-sm:w-[90%] max-sm:px-4 overflow-wrap break-word">
+            <div className="w-[50%] my-1 flex flex-col items-center justify-center text-justify text-white max-md:w-[70%] max-sm:w-[90%] max-sm:px-4 overflow-wrap break-word font-playfair">
               <h1 className="text-4xl pb-2 font-bold max-md:text-3xl max-sm:text-xl line-clamp-1 text-White">
-                Connect with us! 
+                Connect with us!
               </h1>
             </div>
           </div>
@@ -65,10 +65,10 @@ const ContactPage = () => {
 
         <div className="min-h-[85%] bg-gray-200/50  flex flex-col items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
           <div className="max-w-2xl w-full bg-white shadow-md rounded-lg p-8">
-            <h1 className="text-5xl font-bold text-center text-gray-900 mb-2">
+            <h1 className="text-5xl font-bold text-center text-blueGrey mb-2 font-playfair">
               Contact Us
             </h1>
-            <p className="text-center text-gray-600 mb-8 pb-6 border-b border-gray-300 bottom-shadow">
+            <p className="text-center text-blueGrey font-semibold mb-8 pb-6 border-b border-gray-300 bottom-shadow font-playfair">
               Experience the unique Nature Stays offered by Dream Comes True
               Travels
             </p>
@@ -191,8 +191,8 @@ const ContactPage = () => {
             )}
           </div>
 
-            {/* Contact us through call or whatsApp */}
-            <div className="border-b border-gray-300 w-full"></div>
+          {/* Contact us through call or whatsApp */}
+          <div className="border-b border-gray-300 w-full"></div>
           <div className="max-w-2xl w-full bg-white shadow-md rounded-lg p-8 mt-8">
             <h2 className="text-3xl font-bold text-center text-blueGrey mb-2 font-playfair">
               Or Call Us
@@ -206,13 +206,14 @@ const ContactPage = () => {
                 className="text-2xl font-bold text-blueGrey hover:underline mx-auto gap-2 "
               >
                 <i className="fi fi-sr-phone-call"></i>
-                <span>
-                    {contactNum}
-                </span>
+                <span>{contactNum}</span>
               </a>
             </div>
           </div>
-          <WhatsAppBtn number={"918860726472"} message={"Hi Dream Comes True Travel"} />
+          <WhatsAppBtn
+            number={"918860726472"}
+            message={"Hi Dream Comes True Travel"}
+          />
         </div>
       </section>
     </div>

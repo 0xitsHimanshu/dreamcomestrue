@@ -4,7 +4,7 @@ const FooterImage = () => {
       {/* Tilted background */}
       <div className="w-full absolute left-0 h-16 sm:h-20 md:h-24 lg:h-28 bg-gradient-to-r from-[#141b34] to-[#161d37] transform skew-y-2 origin-top-right z-10">
         {/* Text content */}
-        <div className="relative z-10 gap-2 sm:gap-4 md:gap-8 lg:gap-28 flex justify-center items-center h-full text-white overflow-hidden">
+        <div className="relative z-10 gap-2 sm:gap-4 md:gap-8 lg:gap-28 flex justify-center items-center h-full text-white overflow-hidden font-playfair">
           <span className="text-sm sm:text-base md:text-lg lg:text-2xl font-bold mr-2 sm:mr-4 md:mr-6 lg:mr-8">
             Explore
           </span>
