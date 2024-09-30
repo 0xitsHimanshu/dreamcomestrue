@@ -28,7 +28,7 @@ const TripGallery = () => {
   const navigate = useNavigate();
 
   const handleSeeAllJourneys = () => {
-    navigate("/trip-gallery");
+    navigate("/trending-packages");
   };
 
   const trips = [
@@ -63,10 +63,10 @@ const TripGallery = () => {
     <div className="my-5 py-8 px-16 flex flex-col items-center justify-center max-md:px-8 max-sm:px-4 lg:mx-32">
       {/* Header Section */}
       <div className="text-blueGrey mb-10">
-        <p className="font-playfair text-xl text-center">Trip Gallery</p>
-        <h2 className="font-playfair text-3xl font-semibold text-center">
-          Completed Journeys
-        </h2>
+        <h1 className="font-playfair text-4xl font-bold text-center">Trending Packages</h1>
+        <p className="font-playfair text-xl font-semibold text-center">
+          Best offers trips from us
+        </p>
       </div>
 
       {/* Trip Cards */}

@@ -26,7 +26,7 @@ function App() {
                   <Route path="/trip" element={<h1>take trip with us</h1>} />
                   <Route path='/packages' element={<TakeTripPage />} />
                   <Route path='/package/:id' element={<h1>check this out</h1>} />
-                  <Route path='/trip-gallery' element={<TripGalleryPage />} />
+                  <Route path='/trending-packages' element={<TripGalleryPage />} />
                 </Routes>
             </main>
           <Footer />

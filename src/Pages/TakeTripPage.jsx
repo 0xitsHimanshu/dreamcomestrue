@@ -3,7 +3,6 @@ import PackageCard from "../components/PackageCard";
 import { packages } from "../lib/PackagesDetails";
 import HeroSection from "../components/HeroSection";
 import background from "../assets/video.mp4";
-import FooterImage from "../components/stripeFooter";
 
 const TakeTripPage = () => {
   return (
@@ -21,7 +20,7 @@ const TakeTripPage = () => {
             </div>
           </div>
         </div>
-        
+
       </section>
 
       <section>
